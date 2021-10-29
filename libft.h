@@ -6,13 +6,13 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 12:32:20 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/10/26 11:35:04 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/10/28 11:42:25 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
+# include <stdlib.h>
 
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
@@ -26,5 +26,5 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 int				ft_atoi(char *str);
-void			ft_memset(void *s, int c, size_t n);
+void			*ft_memset(void *s, int c, size_t n);
 #endif

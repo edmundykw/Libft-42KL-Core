@@ -6,13 +6,13 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:31:18 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/10/26 14:52:34 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/10/28 11:42:41 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	char	*ptr;
 
@@ -22,4 +22,5 @@ void	ft_memset(void *s, int c, size_t n)
 		*ptr = c;
 		ptr++;
 	}
+	return (s);
 }

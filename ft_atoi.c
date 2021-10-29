@@ -6,35 +6,37 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 16:46:52 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/10/27 14:02:33 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/10/28 14:23:19 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_atoi(char *str)
-{
-	int	i;
+{	
 	int	sign;
 	int	base_conv;
 
-	i = 0;
 	sign = 1;
 	base_conv = 0;
-	while ((str[i] != '+' && str[i] != '-') && (str[i] < '0' || str[i] > '9'))
+	if (ft_strlen(str) == 0 || *str == '\e')
+		return (base_conv);
+	while ((*str != '+' && *str != '-') && (*str < '0' || *str > '9'))
 	{
-		i++;
+		if ((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z'))
+			return (base_conv);
+		str++;
 	}
-	while (str[i] == '-' || str[i] == '+')
+	if (*str == '-' || *str == '+')
 	{
-		if (str[i] == '-')
+		if (*str == '-')
 			sign *= -1;
-		i++;
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9' && str[i - 1] != '\e')
+	while (*str >= '0' && *str <= '9' && (*str != '\0'))
 	{
-		base_conv = base_conv * 10 + (str[i] - '0');
-		i++;
+		base_conv = base_conv * 10 + (*str - '0');
+		str++;
 	}
 	return (base_conv * sign);
 }

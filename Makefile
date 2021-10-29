@@ -6,26 +6,18 @@
 #    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:06:07 by ekeen-wy          #+#    #+#              #
-#    Updated: 2021/10/27 14:13:50 by ekeen-wy         ###   ########.fr        #
+#    Updated: 2021/10/28 10:04:41 by ekeen-wy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/14 15:20:32 by ekeen-wy          #+#    #+#              #
-#    Updated: 2021/10/14 15:54:18 by ekeen-wy         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME = libft.a 
 
 cc = gcc
+
 CFLAGS = -Wall -Wextra -Werror
-NAME = libft.a 
+
 DEPS = libft.h
+
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c \
 	  ft_toupper.c ft_tolower.c ft_strlcpy.c ft_strlcat.c ft_strncmp.c ft_atoi.c \
 	  ft_memset.c
@@ -35,10 +27,12 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -csr $(NAME) $(OBJ)
+	ar csr $(NAME) $(OBJ)
 
-$(OBJ): $(DEPS) 
-	
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
+
 fclean: clean 
 	rm -f $(NAME)
 
