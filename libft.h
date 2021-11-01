@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 12:32:20 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/01 14:29:00 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/01 14:46:41 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ int				ft_strncmp(char *s1, char *s2, unsigned int n);
 int				ft_atoi(char *str);
 void			*ft_memset(void *s, int c, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
-void			*ft_memmove(void *str1, const void *str2, size_t n);
+void			*ft_memmove(void *dst, const void *src, size_t len);
 #endif
