@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:29:42 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/01 14:46:57 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/01 15:32:56 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,4 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-
 }
