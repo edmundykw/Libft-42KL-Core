@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 12:32:20 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/04 10:50:14 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/04 14:12:14 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,6 @@ void			*ft_memset(void *s, int c, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
+void			*ft_memchr(const void *s, int c, size_t n);
+void			ft_bzero(void *s, size_t n);
 #endif
