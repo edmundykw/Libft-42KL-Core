@@ -6,9 +6,11 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 21:00:03 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/10/17 21:00:16 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/05 10:54:43 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
