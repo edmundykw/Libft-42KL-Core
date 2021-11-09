@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 12:32:20 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/05 13:16:38 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/08 12:14:47 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,6 @@ void			ft_bzero(void *s, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
+char			*ft_strdup(const char *s);
+void			*ft_calloc(size_t nmemb, size_t size);
 #endif
