@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 12:35:29 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/09 16:01:33 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/10 13:05:45 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	i = nmemb * size;
 	j = 0;
-	if (i > 4294967295)
+	if (i > __INT_MAX__ || i % 2 != 0)
 		return (NULL);
-	ptr = malloc(size * nmemb);
+	ptr = malloc(i);
 	if (ptr == NULL)
 		return (NULL);
 	if (nmemb == 0 || size == 0)
