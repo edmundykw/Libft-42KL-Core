@@ -19,11 +19,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	if ((int) len > ft_strlen((char *) s + start))
-		len = ft_strlen((char *) s + start) + 1;
+	if ((int) len > ft_strlen((char *)(s + start)))
+		len = ft_strlen((char *)(s + start));
 	ptr = (char *)malloc(sizeof(*s) * (len + 1));
-	if (ft_strlen((char *) s) <= (int) start)
-		return (ptr);
+	if ((unsigned int) ft_strlen((char *) s) <= start)
+		return (ft_strdup(""));
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
