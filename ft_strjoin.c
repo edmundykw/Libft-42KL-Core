@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 19:08:39 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/11 19:48:54 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/16 10:17:03 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char			*ptr;
 	unsigned int	len1;
 	unsigned int	len2;
-	unsigned int	i;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
@@ -27,13 +26,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (ptr == NULL)
 		return (NULL);
 	ft_memcpy(ptr, s1, len1);
-	i = len1;
 	while (len2-- != 0)
 	{
-		*(ptr + i) = *(char *) s2;
-		i++;
+		*(ptr + len1) = *(char *) s2;
+		len1++;
 		s2++;
 	}
-	*(ptr + i) = '\0';
+	*(ptr + len1) = '\0';
 	return (ptr);
 }
