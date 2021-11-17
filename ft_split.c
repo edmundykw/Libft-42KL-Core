@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 10:13:05 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/16 23:20:40 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/17 21:10:47 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,26 @@
 
 static unsigned int	word_count(char *s, char c)
 {
-	unsigned int	i;
+	char			*ptr;
 	unsigned int	j;
+	unsigned int	k;
 
-	while (*(s + i) != '\0')
+	j = ft_strlen((s));
+	k = 0;
+	ptr = s;
+	while (*ptr != '\0')
 	{
-		if (*(s + i) != c && (*(s + i + 1) == c || *(s + i + 1) == '\0'))
-			j++;
-		i++;
+		while (*ptr != c && *ptr != '\0')
+		{
+			ptr++;
+			if (*ptr == c)
+				k++;
+			if (k > 0 && ptr == (s + j))
+				k++;
+		}
+		ptr++;
 	}
-	return (j);
+	return (k);
 }
 
 char	**ft_split(char const *s, char c)
