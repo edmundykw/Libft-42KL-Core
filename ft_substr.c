@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 16:17:31 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/11 19:39:00 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/18 22:41:35 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	if ((int) len > ft_strlen((char *)(s + start)))
+	if (len > ft_strlen((char *)(s + start)))
 		len = ft_strlen((char *)(s + start));
 	ptr = (char *)malloc(sizeof(*s) * (len + 1));
-	if ((unsigned int) ft_strlen((char *) s) <= start)
+	if (ft_strlen((char *) s) <= start)
 		return (ft_strdup(""));
 	if (ptr == NULL)
 		return (NULL);

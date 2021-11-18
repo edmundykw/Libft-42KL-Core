@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:17:15 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/06 23:44:14 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/18 22:43:29 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int			h;
-	int			i;
+	unsigned int	h;
+	unsigned int	i;
 
 	h = 0;
 	if (*(char *) little == '\0')

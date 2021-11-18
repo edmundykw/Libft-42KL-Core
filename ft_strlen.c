@@ -6,13 +6,13 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 21:00:03 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/11 10:07:56 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/18 22:39:24 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
 	unsigned int	i;
 
