@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 11:53:03 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/08 12:10:46 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/18 10:49:38 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*ptr;
-	int		i;
+	char			*ptr;
+	unsigned int	i;
 
 	i = 0;
-	ptr = (char *)malloc(sizeof(*ptr) * (ft_strlen((char *) s) + 1));
+	ptr = (char *)malloc(sizeof(char) * (ft_strlen((char *) s) + 1));
 	if (sizeof(ptr) < sizeof(s) || ptr == NULL)
 		return (NULL);
 	while (s[i] != '\0')
