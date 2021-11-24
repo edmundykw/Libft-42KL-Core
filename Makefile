@@ -6,7 +6,7 @@
 #    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:06:07 by ekeen-wy          #+#    #+#              #
-#    Updated: 2021/11/20 21:48:10 by ekeen-wy         ###   ########.fr        #
+#    Updated: 2021/11/24 16:55:54 by ekeen-wy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,11 +25,11 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
 	  ft_strjoin.c ft_strtrim.c	ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-BSRC = ft_lstnew.c
+BSRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 	  
 OBJ = $(SRC:.c=.o)
 
-BOBJ = $(SRC:.c=.o)
+BOBJ = $(BSRC:.c=.o)
 
 all: $(NAME)
 
@@ -37,18 +37,18 @@ $(NAME): $(OBJ)
 	ar csr $(NAME) $(OBJ)
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BSRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
 
 fclean: clean 
-	rm -f $(NAME)
+	rm -f $(NAME) 
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BOBJ)
 
 re: fclean all
 
 bonus: $(OBJ) $(BOBJ)
-	ar csr $(NAME) $(OBJ) $(B_OBJ)
+	ar csr $(NAME) $(OBJ) $(BOBJ)
 
 .PHONY: all clean fclean re bonus 
