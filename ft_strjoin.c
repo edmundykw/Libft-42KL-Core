@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 19:08:39 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/16 10:17:03 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:15:52 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	len1 = ft_strlen((char *) s1);
-	len2 = ft_strlen((char *) s2);
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
 	ptr = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
 	if (ptr == NULL)
 		return (NULL);

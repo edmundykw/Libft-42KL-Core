@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 13:27:04 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/20 17:25:40 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/26 14:37:11 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (s == NULL)
 		return (NULL);
-	len = ft_strlen((char *) s);
+	len = ft_strlen(s);
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
 	i = 0;
 	if (ptr == NULL)

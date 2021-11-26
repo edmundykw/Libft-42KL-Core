@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 22:50:50 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/19 11:04:59 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:03:15 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static unsigned int	front_trim(const char *s1, const char *s2)
 		if (index > i)
 			i++;
 		else
-			i = ft_strlen((char *) s1);
+			i = ft_strlen(s1);
 	}
 	return (index);
 }
@@ -43,7 +43,7 @@ static unsigned int	back_trim(const char *s1, const char *s2)
 	unsigned int	j;
 	unsigned int	index;
 
-	i = ft_strlen((char *) s1) - 1;
+	i = ft_strlen(s1) - 1;
 	while (i > 0)
 	{
 		j = 0;
@@ -71,8 +71,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	if (ft_strlen((char *) s1) == 0 || ft_strlen((char *) set) == 0)
-		return ("");
+	if (ft_strlen(s1) == 0 || ft_strlen(set) == 0)
+		return (ft_strdup(""));
 	start = front_trim(s1, set);
 	end = back_trim(s1, set);
 	len = end - start + 1;
