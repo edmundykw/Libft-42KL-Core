@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:17:15 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/26 15:18:27 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/26 17:42:35 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	h = 0;
 	if (*(char *) little == '\0')
 		return ((char *) big);
+	if ((int) len < 0)
+		len = ft_strlen(big);
 	while (*(big + h) != '\0' && big + h <= big + len - 1)
 	{
 		i = 0;
@@ -29,10 +31,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			{
 				if (*(big + h + i) == *(little + i)
 					&& big + h + i <= big + len - 1)
-				{
 					if (i + 1 == ft_strlen(little))
 						return ((char *)(big + h));
-				}
 				i++;
 			}
 		}

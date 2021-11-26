@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 12:32:20 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/26 15:20:03 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/26 16:01:04 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int				ft_isprint(int c);
 size_t			ft_strlen(const char *str);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_atoi(const char *str);
 void			*ft_memset(void *s, int c, size_t n);
