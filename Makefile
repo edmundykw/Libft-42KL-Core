@@ -6,7 +6,7 @@
 #    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:06:07 by ekeen-wy          #+#    #+#              #
-#    Updated: 2021/11/24 21:46:30 by ekeen-wy         ###   ########.fr        #
+#    Updated: 2021/11/28 19:29:04 by ekeen-wy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,10 +36,6 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar csr $(NAME) $(OBJ)
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BSRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
 
 fclean: clean 
 	rm -f $(NAME) 

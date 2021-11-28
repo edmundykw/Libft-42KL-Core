@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 22:50:50 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/26 15:03:15 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/28 19:25:58 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	if (ft_strlen(s1) == 0 || ft_strlen(set) == 0)
+	if (ft_strlen(s1) == 0)
 		return (ft_strdup(""));
 	start = front_trim(s1, set);
 	end = back_trim(s1, set);
