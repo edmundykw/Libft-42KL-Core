@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekeen-wy <ekeen-wy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 10:18:24 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/01 14:23:27 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/29 17:08:48 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*ptr;
 
 	ptr = dest;
-	if (dest == NULL && src == NULL)
+	if (dest == src)
 		return (dest);
 	while (n-- != 0)
 	{

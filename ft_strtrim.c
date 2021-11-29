@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 22:50:50 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/28 19:25:58 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:21:51 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (start > len)
 		len = 1;
 	ptr = ft_substr(s1, start, len);
-	if (ptr == NULL)
-		return (NULL);
 	return (ptr);
 }

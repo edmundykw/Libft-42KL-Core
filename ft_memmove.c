@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:29:42 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/05 11:50:38 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/29 17:09:20 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	unsigned char	*ptr;
 
 	ptr = dest;
-	if (dest == NULL && src == NULL)
+	if (dest == src)
 		return (dest);
 	if (dest < src)
 	{

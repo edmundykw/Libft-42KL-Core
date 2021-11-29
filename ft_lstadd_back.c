@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:58:03 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/24 20:29:01 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/11/29 17:05:42 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		ptr = ft_lstlast(*lst);
 		ptr -> next = new;
-		new -> next = NULL;
 	}
 }
