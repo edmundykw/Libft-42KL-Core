@@ -6,60 +6,46 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 22:50:50 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/29 18:21:51 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2021/12/11 20:35:00 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_charcmp(char s1, char const *set)
+{
+	size_t	i;
+
+	i = 0;
+	while (set[i] != '\0')
+	{
+		if (s1 == set[i])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 static unsigned int	front_trim(const char *s1, const char *s2)
 {
 	unsigned int	i;
-	unsigned int	j;
-	unsigned int	index;
 
 	i = 0;
-	index = 0;
-	while (s1[i] != '\0')
-	{
-		j = 0;
-		while (s2[j] != '\0')
-		{
-			if (s1[i] == s2[j])
-				index++;
-			j++;
-		}
-		if (index > i)
-			i++;
-		else
-			i = ft_strlen(s1);
-	}
-	return (index);
+	while (!ft_charcmp(s1[i], s2) && s1[i] != '\0')
+		i++;
+	return (i);
 }
 
 static unsigned int	back_trim(const char *s1, const char *s2)
 {
 	unsigned int	i;
-	unsigned int	j;
-	unsigned int	index;
+	unsigned int	len;
 
-	i = ft_strlen(s1) - 1;
-	while (i > 0)
-	{
-		j = 0;
-		index = i;
-		while (s2[j] != '\0')
-		{
-			if (s1[i] == s2[j])
-				index--;
-			j++;
-		}
-		if (i > index)
-			i--;
-		else
-			i = 0;
-	}
-	return (index);
+	len = ft_strlen(s1) - 1;
+	i = len;
+	while (!ft_charcmp(s1[i], s2) && len-- > 0)
+		i--;
+	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
