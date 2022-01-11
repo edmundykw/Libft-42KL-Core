@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 16:17:31 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/28 18:50:36 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2022/01/11 11:42:36 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == NULL)
 		return (NULL);
 	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
+	{
+		ptr = (char *)malloc(sizeof(char));
+		*ptr = '\0';
+		return (ptr);
+	}
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
