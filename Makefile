@@ -6,7 +6,7 @@
 #    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:06:07 by ekeen-wy          #+#    #+#              #
-#    Updated: 2021/12/11 20:47:36 by ekeen-wy         ###   ########.fr        #
+#    Updated: 2022/01/12 13:53:04 by ekeen-wy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 BSRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c get_next_line_bonus.c \
+		get_next_line_utils_bonus.c
 	  
 OBJ = $(SRC:.c=.o)
 
@@ -34,7 +35,7 @@ BOBJ = $(BSRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(DEPS)
 	ar csr $(NAME) $(OBJ)
 
 fclean: clean 
