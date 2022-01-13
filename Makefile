@@ -6,13 +6,13 @@
 #    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:06:07 by ekeen-wy          #+#    #+#              #
-#    Updated: 2022/01/12 13:53:04 by ekeen-wy         ###   ########.fr        #
+#    Updated: 2022/01/13 11:56:57 by ekeen-wy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a 
 
-cc = gcc
+CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
