@@ -6,7 +6,7 @@
 #    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:06:07 by ekeen-wy          #+#    #+#              #
-#    Updated: 2022/01/13 11:56:57 by ekeen-wy         ###   ########.fr        #
+#    Updated: 2022/01/13 12:06:16 by ekeen-wy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,10 @@ BOBJ = $(BSRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(DEPS)
+$(NAME): $(OBJ)
 	ar csr $(NAME) $(OBJ)
+
+$(OBJ): $(DEPS)
 
 fclean: clean 
 	rm -f $(NAME) 
