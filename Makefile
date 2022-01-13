@@ -6,7 +6,7 @@
 #    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:06:07 by ekeen-wy          #+#    #+#              #
-#    Updated: 2022/01/13 12:16:48 by ekeen-wy         ###   ########.fr        #
+#    Updated: 2022/01/13 14:18:45 by ekeen-wy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 BSRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c get_next_line_bonus.c \
-		get_next_line_utils_bonus.c
+		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c get_next_line_bonus.c
 	  
 OBJ = $(SRC:.c=.o)
 
@@ -35,8 +34,8 @@ BOBJ = $(BSRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(DEPS)
-	ar csr $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+	ar csr $(NAME) $?
 
 fclean: clean 
 	rm -f $(NAME) 
@@ -47,6 +46,6 @@ clean:
 re: fclean all
 
 bonus: $(OBJ) $(BOBJ)
-	ar csr $(NAME) $(OBJ) $(BOBJ)
+	ar csr $(NAME) $?
 
 .PHONY: all clean fclean re bonus 

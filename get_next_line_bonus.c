@@ -6,11 +6,11 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 13:25:16 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/12/30 19:49:47 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2022/01/13 14:12:59 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
 /*
 the last if condition is to check whether all characters in buf are copied
@@ -29,7 +29,7 @@ static char	*gnl_output(char **str)
 	len = ft_strlen(*str);
 	if (!ft_strchr(*str, '\n'))
 	{
-		output = gnl_substr(*str, 0, len);
+		output = ft_substr(*str, 0, len);
 		*str = NULL;
 		free(temp);
 		return (output);
