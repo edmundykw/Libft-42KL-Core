@@ -6,7 +6,7 @@
 #    By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/15 10:06:07 by ekeen-wy          #+#    #+#              #
-#    Updated: 2022/01/13 14:18:45 by ekeen-wy         ###   ########.fr        #
+#    Updated: 2022/01/13 15:11:13 by ekeen-wy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar csr $(NAME) $?
+
+$(OBJ): $(DEPS) $?
 
 fclean: clean 
 	rm -f $(NAME) 
