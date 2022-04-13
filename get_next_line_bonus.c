@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 13:25:16 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2022/01/13 14:12:59 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2022/01/25 13:19:25 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char	*gnl_output(char **str)
 		return (output);
 	}
 	index = ft_strlen(ft_strchr(*str, '\n'));
-	output = gnl_substr(*str, 0, len - index + 1);
+	output = ft_substr(*str, 0, len - index + 1);
 	if (len == ft_strlen(output))
 		*str = NULL;
 	else
