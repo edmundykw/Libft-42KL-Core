@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 10:13:05 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2021/11/18 22:42:09 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2022/01/25 17:47:45 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	**ft_split(char const *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	ptr = ft_calloc(word_count((char *) s, c) + 1, sizeof(ptr));
+	ptr = (char **)ft_calloc(word_count((char *) s, c) + 1, sizeof(ptr));
 	if (ptr == NULL)
 		return (NULL);
 	k = 0;
