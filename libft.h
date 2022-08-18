@@ -6,7 +6,7 @@
 /*   By: ekeen-wy <ekeen-wy@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 12:32:20 by ekeen-wy          #+#    #+#             */
-/*   Updated: 2022/01/13 15:12:48 by ekeen-wy         ###   ########.fr       */
+/*   Updated: 2022/08/18 19:42:33 by ekeen-wy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 typedef struct s_list
 {
-	void			*content;
+	double			*content;
 	struct s_list	*next;
 }	t_list;
 t_list			*ft_lstnew(void *content);

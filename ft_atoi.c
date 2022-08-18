@@ -14,29 +14,26 @@
 
 int	ft_atoi(const char *str)
 {	
-	int	sign;
-	int	base_conv;
+	int		sign;
+	int		base_conv;
+	size_t	i;
 
 	sign = 1;
 	base_conv = 0;
-	if (ft_strlen(str) == 0 || *str == '\e')
-		return (base_conv);
-	while ((*str != '+' && *str != '-') && (*str < '0' || *str > '9'))
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-')
 	{
-		if ((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z'))
-			return (base_conv);
-		str++;
+		sign *= -1;
+		i++;
 	}
-	if (*str == '-' || *str == '+')
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (*str == '-')
-			sign *= -1;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9' && (*str != '\0'))
-	{
-		base_conv = base_conv * 10 + (*str - '0');
-		str++;
+		base_conv = base_conv * 10 + (str[i] - '0');
+		i++;
 	}
 	return (base_conv * sign);
 }
