@@ -16,6 +16,7 @@ This is the first project within 42KL's core program. The goal is to re-code som
 • memmove
 • strlcpy
 • strlcat
+
 • toupper
 • tolower
 • strchr
@@ -28,6 +29,7 @@ This is the first project within 42KL's core program. The goal is to re-code som
 • calloc
 • strdup
 • ft_substr
+
 • ft_strjoin
 • ft_strtrim
 • ft_split
